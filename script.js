@@ -12,11 +12,16 @@ function renderProducts(productsToRender) {
   const productList = $('.product-list');
   productList.empty();
 
+  if (productsToRender.length === 0) {
+    productList.append(`<p class="no-products-msg">No products found.</p>`);
+    return;
+  }
+
   productsToRender.forEach(product => {
     const isSelected = selectedIds.includes(product.id);
 
-    const card = $(
-      `<div class="product-card">
+    const card = $(`
+      <div class="product-card">
         <img src="${product.image}" alt="${product.name}" />
         <h3>${product.name}</h3>
         <div class="rating">${getStarRating(product.rating)}</div>
@@ -24,14 +29,15 @@ function renderProducts(productsToRender) {
         <button class="${isSelected ? 'added' : ''}" data-id="${product.id}" ${isSelected ? 'disabled' : ''}>
           ${isSelected ? 'Added to Compare' : 'Add to Compare'}
         </button>
-      </div>`
-    );
+      </div>
+    `);
 
     productList.append(card);
   });
 
   attachButtonEvents(productsToRender);
 }
+
 
 function attachButtonEvents(productsToRender) {
   $('.product-card button').off('click').on('click', function () {
@@ -156,7 +162,7 @@ $(document).ready(function () {
   $(document).ready(function () {
   // Render search input and clear icon
   $('.search-container').html(`
-    <input type="text" id="search-input" placeholder="Search products..." />
+    <input type="text" id="search-input" placeholder="Search with name or brand..." />
     <span id="clear-search" title="Clear search">×</span>
   `);
 
