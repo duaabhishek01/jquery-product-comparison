@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Comparison UI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="page-title">Product Comparison UI</h1>
+
+    <div class="search-header">
+      <h2 class="section-title" id="list-heading">All Mobiles</h2>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search products..." />
+        <span id="clear-search" title="Clear search">×</span>
+      </div>
+    </div>
+
+<div class="product-list"></div>
+
+
+    <div id="compareHeader" class="header-with-reset" style="display: none;">
+      <h2 class="section-title">Compare Mobiles</h2>
+      <button class="reset-btn" id="resetCompare">Reset Comparison</button>
+    </div>
+
+    <div id="compareSection" class="compare-section"></div>
+  </div>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Local scripts -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
