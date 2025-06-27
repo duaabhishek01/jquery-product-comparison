@@ -2,8 +2,7 @@
 
 A sleek, responsive product comparison interface built using **HTML5**, **CSS3**, and **jQuery**
 
-🌐 **Live Demo:**  
-[https://your-github-username.github.io/product-comparison-jquery/](https://your-github-username.github.io/product-comparison-jquery/)
+🌐 **Live Demo:**  [https://your-github-username.github.io/jquery-product-comparison/](https://your-github-username.github.io/jquery-product-comparison/)
 
 ---
 
@@ -38,7 +37,7 @@ product-comparison-jquery/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-github-username/product-comparison-jquery.git
+git clone https://github.com/your-github-username/jquery-product-comparison.git
 cd product-comparison-jquery
 
 ## 2. Just open index.html
